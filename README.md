@@ -1,3 +1,5 @@
+# 声明：本教程仅供学习使用，造成的后果请自行承担
+
 # 基于Archlinux构建利用bwrap运行最新原生Linux版微信
 本教程参考了以下内容：  
 
@@ -16,10 +18,11 @@ makepkg
 构建完成后会生成一个`wechat-beta-bwrap-1.0.0.145-11-x86_64.pkg.tar.zst`安装包，若需要在Ubuntu等Debian发行版上安装则需要重新打包为.deb格式，
 先通过命令
 ```shell
+mkdir wechat-beta_bwrap
 bsdtar -xvf wechat-beta-bwrap-1.0.0.145-11-x86_64.pkg.tar.zst -C wechat-beta_bwrap
 ```
 将安装包解压
-# 以下步骤在Ubuntu 23.10中执行
+# 以下步骤在Ubuntu中执行
 ## 将解压后的目录整个复制到Ubuntu中，因为上一步使用的docker构建的因此这里使用以下命令复制：
 ```shell
 docker cp archlinux:/wechat-beta-bwrap/wechat-beta_bwrap .
@@ -36,4 +39,9 @@ dpkg-deb -b wechat-beta_bwrap wechat-beta_1.0.0.145_amd64.bwrap.deb
 ```shell
 sudo dpkg -i wechat-beta_1.0.0.145_amd64.bwrap.deb
 ```
+# 打包好的deb格式：
+https://pan.baidu.com/s/1cbNCCcoNWWu2ZdtDhy6ErQ?pwd=592p  
+
+# 打包好的archlinux格式：
+https://pan.baidu.com/s/1hE_cYi7M506ZUJ8yzcT78A?pwd=p89y  
 
