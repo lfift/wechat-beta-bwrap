@@ -1,0 +1,11 @@
+Package: wechat-beta
+Version: 1.0.0.145
+Architecture: amd64
+Maintainer: WeChat Team <>
+Installed-Size: 351725
+Pre-Depends: dpkg (>= 1.14.0)
+Provides: wechat
+Section: default
+Priority: optional
+Description: wechat from Tencent
+ wechat from Tencent
